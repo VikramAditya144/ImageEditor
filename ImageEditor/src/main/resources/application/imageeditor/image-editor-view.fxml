@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Label?>
+<VBox alignment="TOP_CENTER" minHeight="600.0" minWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="application.imageeditor.ImageEditorController">
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#menuOpenClicked" text="Open..."/>
+            <MenuItem mnemonicParsing="false" onAction="#menuSaveClicked" text="Save"/>
+            <MenuItem mnemonicParsing="false" onAction="#menuSaveAsClicked" text="Save As..."/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" onAction="#menuExitClicked" text="Exit"/>
+        </Menu>
+    </MenuBar>
+    <ToolBar prefHeight="52.0" prefWidth="800.0">
+        <Button mnemonicParsing="false" onAction="#grayScale" text="Grayscale"/>
+        <Button mnemonicParsing="false" onAction="#rotateLeft" text="Rotate left"/>
+        <Button mnemonicParsing="false" onAction="#rotateRight" text="Rotate right"/>
+        <Button mnemonicParsing="false" onAction="#flipHorizontal" text="Flip horizontal"/>
+        <Button mnemonicParsing="false" onAction="#flipVertical" text="Flip vertical"/>
+        <Button mnemonicParsing="false" onAction="#blur" text="Blur"/>
+    </ToolBar>
+    <ToolBar prefHeight="52.0" prefWidth="800.0">
+        <Label text="Brightness" />
+        <Slider fx:id="slider" blockIncrement="1" value="50" />
+    </ToolBar>
+
+    <ImageView fx:id="imageView" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true"
+               smooth="false">
+    </ImageView>
+</VBox>

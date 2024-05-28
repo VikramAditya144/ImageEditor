@@ -1,0 +1,7 @@
+My project has the features of changing brightness, grayscaling, rotating (clockwise and anti-clockwise), flipping (horizontal and vertical), blurring, opening and saving an image.
+
+I implemented my own algorithms for each of the image manipulation functions.
+
+I have properly modularized my code using functions.
+
+Additionally, I used JavaFX to create a GUI, which has buttons for each of the functions, and a slider for changing the brightness.
